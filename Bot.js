@@ -37,7 +37,10 @@ var commands = {
   '!song': {
     execute: showSong,
     description: 'get the current song'
-  }
+  },
+  '!leave': {
+    execute: leave,
+    description: 'leave current voice channel'
 };
 
 Bot.on('message', message => {
@@ -87,7 +90,10 @@ function getVideo(args, message) {
     message.reply(Helper.wrap(err));
   });
 }
-
+function leave(args, message) {
+  if(command == 'leave') {
+        client.leaveVoiceChannel();
+});
 function countWordsByUser(args, message) {
   WordService.countWordsByUser(args, message);
 }
