@@ -37,11 +37,9 @@ var commands = {
   '!song': {
     execute: showSong,
     description: 'get the current song'
-  },
-  '!leave': {
-    execute: leave,
-    description: 'leave current voice channel'
-};
+  });
+  
+}
 
 Bot.on('message', message => {
   WordService.registerMessage(message);
