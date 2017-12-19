@@ -33,13 +33,12 @@ var commands = {
   '!voteskip': {
     execute: voteSkip,
     description: 'vote to skip the current song'
-  },
+},
   '!song': {
     execute: showSong,
     description: 'get the current song'
-  });
-  
-}
+  }
+};
 
 Bot.on('message', message => {
   WordService.registerMessage(message);
