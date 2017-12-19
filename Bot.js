@@ -33,7 +33,7 @@ var commands = {
   '!voteskip': {
     execute: voteSkip,
     description: 'vote to skip the current song'
-},
+  },
   '!song': {
     execute: showSong,
     description: 'get the current song'
@@ -87,10 +87,7 @@ function getVideo(args, message) {
     message.reply(Helper.wrap(err));
   });
 }
-function leave(args, message) {
-  if(command == 'leave') {
-        client.leaveVoiceChannel();
-});
+
 function countWordsByUser(args, message) {
   WordService.countWordsByUser(args, message);
 }
